@@ -1,0 +1,5 @@
+1670836682273	Delete resource '002LED_Tasks/common/ThirdParty/FreeRTOS/FreeRTOSConfig.h'
+1670880998467	Delete resource '004LED_Periodic_Tasks/Core/Src/main.c'
+1670923309291	Delete resource '005LED_Task_Notify/Core/Src/main.c'
+1670957714248	Delete resource '006LED_Btn_ISR/Core/Src/main.c'
+1671028366798	Delete resource '007Task_Priorities/Core/Src/main.c'

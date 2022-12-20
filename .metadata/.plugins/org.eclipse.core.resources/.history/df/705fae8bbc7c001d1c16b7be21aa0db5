@@ -1,0 +1,64 @@
+/*
+ * task_handler.c
+ *
+ *  Created on: Dec 15, 2022
+ *      Author: rupesh
+ */
+
+#include "main.h"
+
+void menu_task(void *param)
+{
+	BaseType_t ret;
+	command_t cmd;
+
+	while(1)
+	{
+		//TODO: Implement notify wait
+		ret = xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+		if(ret == pdTRUE)
+		{
+			//process the user data(command) stored in input data queue
+			process_command();
+		}
+
+	}
+
+}
+
+void cmd_handler_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+
+void print_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+void led_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+void rtc_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}

@@ -1,0 +1,10 @@
+20:05:03 **** Incremental Build of configuration Debug for project 008Queues_Timers ****
+make -j8 all 
+arm-none-eabi-size   008Queues_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35384	    156	 104708	 140248	  223d8	008Queues_Timers.elf
+Finished building: default.size.stdout
+ 
+
+20:05:03 Build Finished. 0 errors, 0 warnings. (took 568ms)
+

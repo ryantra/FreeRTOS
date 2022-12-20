@@ -1,0 +1,93 @@
+/*
+ * task_handler.c
+ *
+ *  Created on: Dec 15, 2022
+ *      Author: rupesh
+ */
+
+#include "main.h"
+
+void menu_task(void *param)
+{
+	BaseType_t ret;
+	command_t cmd;
+
+	while(1)
+	{
+		//TODO: Implement notify wait
+		ret = xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+		if(ret == pdTRUE)
+		{
+			//process the user data(command) stored in input data queue
+			process_command(&cmd);
+		}
+
+	}
+
+}
+
+void process_command(command_t *cmd)
+{
+	extract_command(cmd);
+
+	switch(curr_state)
+	{
+	case sMainMenu:
+		//Notify menu task with the command
+		xTaskNotify(handle_menu_task, (uint32_t)cmd,eSetValueWithOverwrite);
+	break;
+
+	case sLedEffect:
+		//Notify LED task with the command
+		xTaskNotify(handle_led_task, (uint32_t)cmd,eSetValueWithOverwrite);
+	break;
+
+	case sRtcMenu:
+	case sRtcTimeConfig:
+	case sRtcDateConfig:
+	case sRtcreport:
+		xTaskNotify(handle_rtc_task, (uint32_t)cmd,eSetValueWithOverwrite);
+	break;
+
+
+	}
+}
+
+
+
+void cmd_handler_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+
+void print_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+void led_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}
+
+void rtc_task(void *param)
+{
+	while(1)
+	{
+
+	}
+
+}

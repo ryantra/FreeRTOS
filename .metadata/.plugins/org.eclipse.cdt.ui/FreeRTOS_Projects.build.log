@@ -1,0 +1,7 @@
+20:06:15 **** Clean-only build of configuration Debug for project FreeRTOS_Projects ****
+make -j8 clean 
+rm -rf *
+ 
+
+20:06:15 Build Finished. 0 errors, 0 warnings. (took 678ms)
+

@@ -1,0 +1,23 @@
+19:37:58 **** Incremental Build of configuration Debug for project sample_led ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DNUCLEO_F411RE -DSTM32 -DSTM32F4 -DSTM32F411RETx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:21:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+    ^~~~~~~
+arm-none-eabi-gcc -o "sample_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/rupesh/Workspace/RTOS_workspace/sample_led/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sample_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sample_led.elf
+ 
+arm-none-eabi-objdump -h -S  sample_led.elf  > "sample_led.list"
+arm-none-eabi-objcopy  -O binary  sample_led.elf  "sample_led.bin"
+arm-none-eabi-size   sample_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+    788	      8	   1568	   2364	    93c	sample_led.elf
+Finished building: default.size.stdout
+Finished building: sample_led.bin
+ 
+Finished building: sample_led.list
+ 
+ 
+
+19:37:59 Build Finished. 0 errors, 1 warnings. (took 625ms)
+

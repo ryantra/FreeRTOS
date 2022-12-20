@@ -1,0 +1,10 @@
+23:45:12 **** Incremental Build of configuration Debug for project 004LED_Periodic_Tasks ****
+make -j8 all 
+arm-none-eabi-size   004LED_Periodic_Tasks.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23540	     36	 110092	 133668	  20a24	004LED_Periodic_Tasks.elf
+Finished building: default.size.stdout
+ 
+
+23:45:13 Build Finished. 0 errors, 0 warnings. (took 579ms)
+

@@ -1,0 +1,8 @@
+task_handler.c:15:6:menu_task	40	static
+task_handler.c:76:6:led_task	40	static
+task_handler.c:127:9:getnumber	24	static
+task_handler.c:141:6:rtc_task	120	static
+task_handler.c:371:6:print_task	32	static
+task_handler.c:382:6:cmd_handler_task	48	static
+task_handler.c:401:6:process_command	24	static
+task_handler.c:428:5:extract_command	32	static
