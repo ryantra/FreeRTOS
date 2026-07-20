@@ -3,6 +3,7 @@
 A progressive set of nine labs for learning real-time concepts with FreeRTOS on the
 STM32 NUCLEO-F411RE, with scheduling behavior verified in SEGGER SystemView.
 
+![CI](https://github.com/ryantra/FreeRTOS/actions/workflows/ci.yml/badge.svg)
 ![Language](https://img.shields.io/badge/C-97%25-00599C?logo=c&logoColor=white)
 ![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-009900?logo=freertos&logoColor=white)
 ![MCU](https://img.shields.io/badge/MCU-STM32F411RE-03234B?logo=stmicroelectronics&logoColor=white)
