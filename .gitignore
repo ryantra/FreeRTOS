@@ -1,3 +1,33 @@
-.git
-.metadata
-*.
+# Save this as ".gitignore" at the root of your STM32CubeIDE repos:
+#   embedded-c, Nucleof411xx_drivers, FreeRTOS
+# It stops build output (which is what makes GitHub report the repo as
+# mostly Assembly) from being committed.
+
+# --- STM32CubeIDE / GCC build output ---
+Debug/
+Release/
+*/Debug/
+*/Release/
+build/
+
+# Compiled objects, listings, and binaries
+*.o
+*.d
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.s          # generated assembly listings (keep hand-written .S if you have any)
+*.su
+*.mod
+
+# --- Eclipse / STM32CubeIDE workspace metadata ---
+.metadata/
+.settings/
+*.launch     # remove this line if you intentionally track a debug launch config
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db

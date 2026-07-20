@@ -1,48 +1,47 @@
-# FreeRTOS
-The goal of this project is to Master RTOS prectically using FreeRTOS and STM32 Microcontroller.
+# FreeRTOS on STM32 — Hands-On RTOS Labs
 
- To port/run FreeRTOS using development setup which includes
+A progressive set of nine labs for learning real-time concepts with FreeRTOS on the
+STM32 NUCLEO-F411RE, with scheduling behavior verified in SEGGER SystemView.
 
- - STM32CUBEIDE 
- - STM32F4xx 
- - FreeRTOS 
- - SEGGER SystemView
- 
- Targeted Hardware
- 
-  NUCLEOF411re development board https://www.st.com/en/evaluation-tools/nucleo-f411re.html 
-  
-  Software Used
-  
-    1.STM32CUBEIDE
-    2.SEGGER SystemView (single shot / continious)
-  
-  Host Machine was Ubuntu 20.04
-  
-  STM32CubeIDE Generic Linux Installer.
+![Language](https://img.shields.io/badge/C-97%25-00599C?logo=c&logoColor=white)
+![RTOS](https://img.shields.io/badge/RTOS-FreeRTOS-009900?logo=freertos&logoColor=white)
+![MCU](https://img.shields.io/badge/MCU-STM32F411RE-03234B?logo=stmicroelectronics&logoColor=white)
 
-Downloading link STMCUBE32 IDE
+## The idea
 
-   https://www.st.com/en/development-tools/stm32cubeide.html
+Each folder is a small, self-contained lab that introduces exactly one RTOS concept, so the
+progression is easy to follow: start with a single task, then add scheduling, then
+inter-task communication and synchronization. Where timing matters, I used SEGGER
+SystemView to actually watch the scheduler and interrupts on a timeline rather than
+guessing.
 
-Once zip downloaded and extracted you get a .sh script file.
-Make it executable opening in terminal.
+## Labs
 
-         (chmod +x ***.sh)
- 
-For Ubuntu, either:
-   
-    1. sudo ./st-stm32cubeide_1.4.0_7511_20200720_0928_amd64.deb_bundle​.sh
+| # | Folder | Concept |
+|---|---|---|
+| 001 | `001Tasks` | Task creation and the scheduler |
+| 002 | `002LED_Tasks` | Driving hardware from a task |
+| 003 | `003LED_Block_Tasks` | Blocking versus busy-waiting |
+| 004 | `004LED_Periodic_Tasks` | Periodic scheduling with `vTaskDelayUntil` |
+| 005 | `005LED_Task_Notify` | Lightweight task notifications |
+| 006 | `006LED_Btn_ISR` | Signaling a task from an ISR |
+| 007 | `007Task_Priorities` | Priorities and preemption |
+| 008 | `008Queues_Timers` | Queues and software timers |
+| 009 | `009Binary_Semaphore` | Semaphore-based synchronization |
 
-or 
-   
-    1. ./st-stm32cubeide_1.4.0_7511_20200720_0928_amd64​.sh
-    
-  
-  Downloading link SEGGER SystemView
-    https://www.segger.com/downloads/systemview/
-    
-    
-  
-  
-  
+## Hardware and tools
+
+- Board: STM32 NUCLEO-F411RE (ARM Cortex-M4)
+- IDE: STM32CubeIDE, on Ubuntu 20.04
+- Tracing: SEGGER SystemView for the real-time task and ISR timeline
+
+## Build and run
+
+1. Open the lab folder you want in STM32CubeIDE.
+2. Build and flash it to the NUCLEO board.
+3. Optionally attach SEGGER SystemView to watch the scheduling live.
+
+## Skills demonstrated
+
+FreeRTOS, RTOS scheduling, tasks and priorities, queues, semaphores, software timers,
+ISR design, ARM Cortex-M, and SEGGER SystemView.
