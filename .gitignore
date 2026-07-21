@@ -31,3 +31,9 @@ build/
 # --- OS noise ---
 .DS_Store
 Thumbs.db
+
+# Eclipse / STM32CubeIDE workspace metadata
+.metadata/
+RemoteSystemsTempFiles/
+includepathsettings.xml
+.settings/
